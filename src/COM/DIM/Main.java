@@ -1,11 +1,15 @@
 package COM.DIM;
 
+import java.util.*;
+
 /**
  * Created by us9522 on 19.04.2016.
  */
-import java.util.Scanner;
+
 
 public class Main {
+    private static final int TEAMS_COUNT = 6;
+    private static final int RESULT_PARAMETERS = 10;
 
     public static void main(String[] args) {
 // write your code here
@@ -101,11 +105,27 @@ public class Main {
                 }
 
                 //В кінцевому результаті рахуємо очки без бонусних
-                teams[i][2] = (teams[i][4] * 3) + (teams[i][6]);
+                teams[i][2] = (teams[i][4] * 3) + (teams[i][5]);
+
+                //оновлюємо масив який зберігає інформацію про попередню гру
+                teamsPre[i][j] = teams[i][j];
 
                 System.out.print(teams[i][j] + "   ");
             }
             System.out.println("");
+        }
+
+        Random r = new Random();
+        Map<Integer, List<Integer>> mapTeam = new HashMap<Integer, List<Integer>>();
+        for(int i = 0; i < TEAMS_COUNT; i++) {
+            List<Integer> l = new ArrayList<Integer>();
+            for (int j = 1; j < RESULT_PARAMETERS; j++) {
+                l.add(teams[i][j]);
+            }
+            mapTeam.put(i, l);
+        }
+        for(Map.Entry<Integer, List<Integer>> lMap : mapTeam.entrySet()){
+            System.out.println(lMap.getKey() + "=" + lMap.getValue());
         }
     }
 }
