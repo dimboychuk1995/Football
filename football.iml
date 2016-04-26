@@ -11,7 +11,16 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Desktop/libs for progects/com.mysql.jdbc_5.1.5.jar/com.mysql.jdbc_5.1.5.jar!/" />
+          <root url="jar://$USER_HOME$/Desktop/libs for progects/mysql-connector-java-5.1.24-bin.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/Desktop/libs for progects/jtds-1.2.5.jar/jtds-1.2.5.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

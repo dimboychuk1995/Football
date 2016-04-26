@@ -1,7 +1,5 @@
 package COM.DIM;
 
-import java.util.*;
-
 /**
  * Created by us9522 on 19.04.2016.
  */
@@ -15,19 +13,13 @@ public class Main {
 
         //insert data
         Team teams[] = new Team[TEAMS_COUNT];
-        System.out.println("insert name teams");
-        Scanner teamName = new Scanner(System.in);
-        for (int i = 0; i < TEAMS_COUNT; i++){
-            teams[i] = new Team(1,teamName.next());
-            //System.out.print(teams[i].toString() + "   ");
-        }
 
-        //sout teams
+        //print all teams
         for(Team item: teams){
             System.out.println(item + " ");
         }
 
-        dataDB.writeFirstData();
+        dataDB.writeData();
 
         //insert null data to database
 

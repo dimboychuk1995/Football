@@ -15,21 +15,20 @@ public class Team {
     public int goal;
     public int plusgoal;
     public int minusgoal;
-    public int dodpoints;
 
-    public Team(int id, String name){
+    public Team(int id, String name, int tur, int points, int matches, int wins, int draw, int lose, int goal,
+                int plusgoal, int minusgoal){
         this.id = id;
         this.name = name;
-        this.tur = 0;
-        this.points = 0;
-        this.matches = 0;
-        this.wins = 0;
-        this.draw = 0;
-        this.lose = 0;
-        this.goal = 0;
-        this.plusgoal = 0;
-        this.minusgoal = 0;
-        this.dodpoints = 0;
+        this.tur = tur;
+        this.points = points;
+        this.matches = matches;
+        this.wins = wins;
+        this.draw = draw;
+        this.lose = lose;
+        this.goal = goal;
+        this.plusgoal = plusgoal;
+        this.minusgoal = minusgoal;
     }
 
     public String toString(){
@@ -45,7 +44,6 @@ public class Team {
                 " goal = " + goal +
                 " plusgoal = " + plusgoal +
                 " minusgoal = " + minusgoal +
-                " dodpoints = " + dodpoints +
                 " };";
     }
 }
