@@ -1,6 +1,11 @@
 package COM.DIM;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 /**
  * Created by us9522 on 25.04.2016.
  */
@@ -30,6 +35,11 @@ public class dataDB  {
         //Resultset.getMetaData() получаем информацию
         //результирующей таблице
 
+        List<Integer> teams = new ArrayList<Integer>();
+
+        Map<String, List<Integer>> map = new HashMap<String, List<Integer>>();
+
+
         Team teamTemp[] = new Team[TEAMS_COUNT];
 
         while(rs.next()){
@@ -38,17 +48,13 @@ public class dataDB  {
                 //teamTemp[i] = rs.getString(i);
             }
             System.out.println();
-        }
 
-        while(rs.next()){
-            for (int i = 0; i <= TEAMS_COUNT; i++){
-                teamTemp[i] = new Team(rs.getInt(1), rs.getString(2),rs.getInt(3),
-                        rs.getInt(4),rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),rs.getInt(9),rs.getInt(10),rs.getInt(11));
+            for (int i = 0; i < TEAMS_COUNT; i++) {
+                teamTemp[i] = new Team(rs.getInt("id"), rs.getString("name"), rs.getInt("id"),
+                        rs.getInt("id"), rs.getInt("id"), rs.getInt("id"), rs.getInt("id"), rs.getInt("id"),
+                        rs.getInt("id"), rs.getInt("id"), rs.getInt("id"));
+                System.out.print(teamTemp[i].toString() + "\t" + "WHY???");
             }
-        }
-
-        for(int i = 0; i < TEAMS_COUNT; i++){
-            System.out.println(teamTemp[i].toString());
         }
 
         System.out.println();

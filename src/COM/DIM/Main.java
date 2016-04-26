@@ -11,13 +11,13 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
-        //insert data
-        Team teams[] = new Team[TEAMS_COUNT];
-
-        //print all teams
-        for(Team item: teams){
-            System.out.println(item + " ");
-        }
+//        //insert data
+//        Team teams[] = new Team[TEAMS_COUNT];
+//
+//        //print all teams
+//        for(Team item: teams){
+//            System.out.println(item + " ");
+//        }
 
         dataDB.writeData();
 
